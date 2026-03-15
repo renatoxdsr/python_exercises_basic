@@ -1,5 +1,5 @@
 # Building a list
-Now that you understand how lists work in Python, it's time to build the foundation of your recipe scaler project! You'll create lists to store the ingredients and their quantities in grams.
+# Now that you understand how lists work in Python, it's time to build the foundation of your recipe scaler project! You'll create lists to store the ingredients and their quantities in grams.
 
 # Instructions:
 
