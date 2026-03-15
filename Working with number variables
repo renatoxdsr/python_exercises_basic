@@ -1,0 +1,23 @@
+*/ Working with number variables /*
+*/ You're building a recipe scaler to adjust ingredient quantities for different party sizes./* 
+*/Your base recipe for pasta sauce serves 4 people and requires certain amounts of ingredients. /*
+*/Some ingredients come in whole units, while others need decimal measurements./* 
+*/You need to store these quantities using the appropriate data types so your recipe scaler can perform calculations accurately later.*/
+
+*/instructions:*/
+*/Store the number of garlic cloves (3) as an integer variable called garlic_cloves.*/
+*/Store the amount of olive oil in tablespoons (2.5) as a float variable called olive_oil_tbsp./*
+*/Increase the amount of olive oil by 1 tablespoon and store it to new_olive_oil_tbsp./*
+
+# Store the number of garlic cloves as an integer
+garlic_cloves = 3;
+
+# Store the olive oil amount as a float
+olive_oil_tbsp = 2.5;
+print(olive_oil_tbsp)
+
+# Increase the olive oil amount
+new_olive_oil_tbsp = 2.5 + 1;
+
+print(garlic_cloves)
+print(new_olive_oil_tbsp)
