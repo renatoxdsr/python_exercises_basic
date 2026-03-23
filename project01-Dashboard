@@ -1,0 +1,80 @@
+import pandas as pd;
+import matplotlib.pyplot as plt;
+
+#creating a pre-defined list
+
+names = ['Maria Haynes', 'Andy Jones', 'Jaylee Ayala', 'Saint Dixon', 'Cara Richardson', 'Ainsley Wiley', 'Augustus Parks', 'Robert Vega', 'Blakely Alvarado', 'Tanner Maddox', 'Sophia Wu', 'Kason Vasquez', 'Rose Aguirre', 'Kyson Esquivel', 'Zainab Rangel', 'Andres Clements', 'Dakota Osborne', 'Mathew Massey', 'Trinity Rowe', 'Hugh Huerta', 'Clementine Liu', 'Kamden Delarosa', 'Iyla Macdonald', 'Pedro Richards'];
+start_date_of_work = [2025, 2025, 2025, 2025, 2025, 2024, 2024, 2026, 2026, 2026, 2025, 2025, 2023, 2023, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026, 2026];
+worked_april03rd = ['True', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'True', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'];
+worked_april06th = ['False', 'False', 'True', 'False', 'False', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'];
+worked_may04th = ['True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False'];
+worked_may25th = ['True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'True', 'True','True', 'True', 'True', 'True', 'True', 'True', 'True', 'True'];
+worked_24aug = ['False', 'False', 'False', 'False', 'True', 'False', 'True', 'True', 'True', 'True', 'False', 'True', 'True', 'False', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True', 'True'];
+worked_eod25 = ['False', 'False', 'False', 'False', 'False', 'True', 'False', 'False', 'False', 'False', 'True', 'True', 'True', 'True', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False', 'False',];
+
+#Create dictionary my_dict with 8 key:value pairs: my_dict
+my_dict = {'name_of_reps': names,
+    'working_start_date' : start_date_of_work,
+    'worked_on_3rdApril': worked_april03rd,
+    'worked_on_6thApril': worked_april06th,
+    'worked_on_4thMay': worked_may04th,
+    'worked_on_25thMay': worked_may25th,
+    'worked_on_24thAugust': worked_24aug,
+    'worked_on_EOD25': worked_eod25 };
+
+# Dictionary to DataFrame
+# Bulding a DataFrame dashboard01 from my_dict: cardashboard01
+dashboard_01 = pd.DataFrame(my_dict);
+
+#printing dashboard01
+#print(dashboard_01);
+
+#print("printing" + worked_april03rd.());
+
+#worked_holidays_26
+#i=0;
+worked_holidays_26 = [];
+
+for i in range(len(names)):
+    count = 0
+
+    if worked_april03rd[i] == 'True':
+        count += 1
+    if worked_april06th[i] == 'True':
+        count += 1
+    if worked_may04th[i] == 'True':
+        count += 1
+    if worked_may25th[i] == 'True':
+        count += 1
+    if worked_24aug[i] == 'True':
+        count += 1
+    if worked_eod25[i] == 'True':
+       count += 1
+       
+    worked_holidays_26.append(count)
+
+
+    plt.scatter(x= names, y= worked_holidays_26);
+#plt.xscale('log')
+
+#string
+xlab = 'Names of the reps'
+ylab = '  Many Holidays worked'
+title = 'Dashboard EOD 2026 Workers'
+
+# Add axis labels
+plt.xlabel(xlab);
+plt.ylabel(ylab);
+
+# Add title
+plt.title(title);
+
+
+# Adapt the ticks on the x-axis
+plt.xticks(names)
+plt.show();
+
+
+plt.figure(figsize=(50,25))
+
+plt.tight_layout();
